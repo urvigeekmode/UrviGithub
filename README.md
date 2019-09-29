@@ -29,6 +29,10 @@
  
  9. Node Js version : 10+
  
+ 10. Fully responsive
+ 
+ 11. Material Design Icons
+ 
 
  --------------------------------------------------------------------------------------------------------------
  How to Run the Project:
