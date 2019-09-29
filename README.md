@@ -1,5 +1,3 @@
-# Namproject
- Receipt Gen
  
  
  # Namproject
