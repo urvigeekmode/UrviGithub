@@ -1,0 +1,57 @@
+
+<mat-sidenav-container fullscreen >
+
+    <mat-sidenav #sidenav mode="push" class="app-sidenav">
+    
+      <mat-toolbar color="primary" >
+         
+        <!--future svg to go here-->
+        <span class="toolbar-filler"></span>
+        <button md-icon-button (click)="sidenav.toggle()" class="md-icon-button sidenav-toggle-button" [hidden]="!sidenav.opened">
+          <mat-icon aria-label="Menu" class="material-icons">close</mat-icon>
+        </button>
+      </mat-toolbar>
+  
+    <mat-nav-list>
+
+        <a mat-list-item class="sidenav-link"  routerLinkActive="active-link" [routerLink]="['/app']" (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon>account_balance</mat-icon>
+          <span class="title" mat-line>Invoice Receipt</span>
+          <!-- <span mat-line class="secondary"></span> -->
+        </a>
+  
+            <a mat-list-item class="sidenav-link" [routerLink]="['/first']" (click)="sidenav.toggle()">
+              <mat-icon mat-list-icon>account_balance</mat-icon>
+              <span class="title" mat-line>Share a Message</span>
+              <!-- <span mat-line class="secondary"></span> -->
+            </a>
+            
+            <a mat-list-item class="sidenav-link" [routerLink]="['/second']" (click)="sidenav.toggle()">
+              <mat-icon mat-list-icon>account_balance</mat-icon>
+              <span class="title" mat-line>Animation</span>
+              <!-- <span mat-line class="secondary"></span> -->
+            </a>
+      <!-- <a mat-list-item routerLink='/first'>First Component</a> -->
+      <!-- <a mat-list-item routerLink='/second'>Second Component</a> -->
+    </mat-nav-list>
+  </mat-sidenav>
+ 
+  <mat-toolbar id="appToolbar" [ngClass]="{'toolbar-fullscreen': (fullscreen$ | async)}" color="primary">
+      <button md-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="sidenav.opened">
+              <mat-icon aria-label="Menu" class="material-icons">menu</mat-icon>
+      </button>
+      <h1 class="component-title">
+        <a style="margin-left: 20%; font-family: 'Courier New', Times, serif;" class="title-link">Receipt</a>
+      </h1>
+      <span class="toolbar-filler"></span>
+      <!--<button id="button-login" md-button [routerLink]="['/signupin']" *ngIf="!(user | async)">Log In</button>-->
+      <button id="button-logout" mat-button></button>
+    </mat-toolbar>
+
+ 
+    <router-outlet>
+
+        
+    </router-outlet>
+    
+</mat-sidenav-container>

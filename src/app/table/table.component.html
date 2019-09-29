@@ -1,0 +1,51 @@
+<br>
+<a mat-icon a >
+    <mat-icon>view_list</mat-icon>Invoice
+  </a>
+
+  <table >
+    
+      <tbody #tbl>
+        <tr *ngFor="let character of characters">
+          <td>{{ character.id }}</td>
+          <td style="color: black">{{ character.name }}</td>
+         
+        </tr>
+      </tbody>
+  </table>
+
+<!-- ----------------SMS--------------------- -->
+<br>
+<a mat-a>
+    <mat-icon>message</mat-icon> 
+</a>
+
+<input readonly #mylblphone id="lblphone" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required>
+
+<a #btneditph mat-a on-click ="onClick()" id="test">
+    <mat-icon>edit</mat-icon> 
+</a>
+<a style="visibility: hidden;" #btnokph mat-a on-click ="onClickok()" id="test">
+    <mat-icon>check_circle</mat-icon> 
+</a>
+
+
+<button type="submit"  id="btnsend"  on-click ="onsendsms()">SMS</button>
+
+<!-- -----------------Email------------------- -->
+<br>
+<a mat-a>
+    <mat-icon>email</mat-icon> 
+</a>
+
+<input readonly #mylblem id="lblem">
+
+<a #btneditem mat-a on-click ="onClickem()" id="test">
+    <mat-icon>edit</mat-icon> 
+</a>
+<a style="visibility: hidden;" #btnokem mat-a on-click ="onClickokem()" id="test">
+    <mat-icon>check_circle</mat-icon> 
+</a>
+
+
+<button id="btnsendem" on-click="onsendmail()">Email</button>
